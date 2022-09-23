@@ -1,0 +1,31 @@
+query { 
+    node (id: "$parent_node_id") {
+  	... on Commit {
+      blame (path: "$filename") {
+        ranges {
+          age,
+          commit {
+            id,
+            message,
+            oid,
+            author {
+              name,
+              email,
+              date,
+              user {
+                login
+              }
+            }
+          },
+          endingLine,
+          startingLine
+        }
+      },
+      file (path: "$filename") {
+        object {
+          id,
+        }
+      }
+    }
+  }
+}

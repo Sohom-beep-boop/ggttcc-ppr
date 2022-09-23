@@ -1,0 +1,5 @@
+*.jsonl[[:space:]]*.csv filter=lfs diff=lfs merge=lfs -text
+*.jsonl filter=lfs diff=lfs merge=lfs -text
+*.csv filter=lfs diff=lfs merge=lfs -text
+commit_data.csv filter=lfs diff=lfs merge=lfs -text
+github-typo-corpus.v1.0.0.jsonl filter=lfs diff=lfs merge=lfs -text
