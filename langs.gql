@@ -1,0 +1,15 @@
+query { 
+  user(login: "$user") {
+    contributionsCollection {
+      totalIssueContributions,
+      totalCommitContributions,
+      totalRepositoryContributions,
+      totalPullRequestContributions,
+      totalPullRequestReviewContributions,
+      totalRepositoriesWithContributedIssues,
+      totalRepositoriesWithContributedCommits,
+      totalRepositoriesWithContributedPullRequests,
+      totalRepositoriesWithContributedPullRequestReviews
+    }
+  }
+}

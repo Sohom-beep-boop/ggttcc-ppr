@@ -1,6 +1,6 @@
 import pandas as pd
 import json
-
+"""
 data = pd.read_csv('commit_data.csv')
 #data.drop_duplicates(inplace=True)
 user_data = data[['user']].drop_duplicates()
@@ -13,4 +13,10 @@ username_list = []
 for user in dirty_username_list:
     username_list.append( user[0] )
 with open('users.json', 'w+') as f:
-    f.write(json.dumps(username_list))
+    f.write(json.dumps(username_list))"""
+users = []
+with open('users.json', 'r') as f:
+    users = json.load(f)
+
+for user in users:
+    pass
